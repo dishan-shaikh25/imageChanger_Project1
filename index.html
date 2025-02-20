@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>event</title>
+
+</head>
+<body>
+  <h1 id="btn1">we learning </h1>
+  <button id="btn2">change to dark</button>
+  <button id="btn3">change to lightk</button>
+
+  <script>
+let btn1 = document.querySelector('#btn1');
+let btn2 = document.querySelector('#btn1');
+
+btn1.addEventListener('click', ()=>{
+  document.body.style.backgroundColor = 'black'
+  document.body.style.color = 'white'
+
+})
+
+btn2.addEventListener('mouseover',()=>{
+  document.body.style.backgroundColor='white'
+  document.body.style.color = 'black'
+})
+</script>
+
+  
+</body>
+</html>

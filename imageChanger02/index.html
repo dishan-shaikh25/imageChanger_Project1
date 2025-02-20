@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Changer</title>
+  <style>
+    body{
+      /* background-color: black;
+      color: whitesmoke; */
+      text-align: center;
+    }
+    .image img{
+      width: 400px;
+      height: 300px;
+      border: 2px solid yellow;
+      border-radius: 10px;
+    }
+   
+   
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Image Changer</h1>
+    <div class="image">
+      <img src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg" alt="">
+      <h2>Image 1</h2>
+    </div>
+  </div>
+
+  <script>
+    let img = document.querySelector('img')
+    let h2 = document.querySelector('h2')
+    let presrc = img.src
+    let prevtext = h2.innerText
+    img.addEventListener('mouseover',()=>{
+      img.src='https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg'
+      h2.innerText='Image2'
+      img.style.border= '2px solid yellow'
+    })
+
+    img.addEventListener('mouseleave',()=>{
+      img.src = presrc
+      h2.innerText = prevtext
+      img.style.border= '2px solid blue'
+    })
+  </script>
+  
+</body>
+</html>
